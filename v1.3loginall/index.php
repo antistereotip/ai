@@ -182,7 +182,7 @@ $total_pages = ceil($total_pages_query->fetch_row()[0] / $limit);
     <ul>
         <?php
         while ($row = $result->fetch_assoc()) {
-            echo "<li>{$row['file_name']} - <a class='btn-view' href='{$row['file_path']}' target='_blank'>Pregledaj</a> - <a class='btn-delete' href='index.php?delete={$row['id']}' onclick='return confirm(\"Jeste li sigurni da želite izbrisati ovaj dokument?\")'>Izbriši</a></li>";
+            echo "<li>{$row['file_name']} - <a class='btn-view' href='{$row['file_path']}' target='_blank'>Pregledaj</a> - <a class='btn-delete' href='index.php?delete={$row['id']}' onclick='return confirm(\"Jeste li sigurni da želite izbrisati ovaj dokument?\")'>Izbriši</a> - <a href='comments.php?document_id={$row['id']}'>Komentari</a></li>";
         }
         ?>
     </ul>
