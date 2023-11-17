@@ -39,18 +39,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['comment_text'])) {
     $conn->query($sql);
 }
 
-// Brisanje komentara
-if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['delete_comment']) && is_numeric($_GET['delete_comment'])) {
-    $deleteCommentId = $_GET['delete_comment'];
-
-    // Proveri postoji li komentar pre brisanja
-    $result = $conn->query("SELECT * FROM comments2 WHERE id = $deleteCommentId AND document_id = $document_id");
-
-    if ($result->num_rows > 0) {
-        $conn->query("DELETE FROM comments2 WHERE id = $deleteCommentId");
-    }
-}
-
 // Dohvatanje komentara za dati dokument
 $comments_result = $conn->query("SELECT * FROM comments2 WHERE document_id = $document_id ORDER BY created_at DESC");
 ?>
@@ -141,10 +129,13 @@ $comments_result = $conn->query("SELECT * FROM comments2 WHERE document_id = $do
     <ul>
         <?php
         while ($comment_row = $comments_result->fetch_assoc()) {
-            echo "<li>{$comment_row['comment_text']} <br><small>{$comment_row['created_at']}</small> ";
-            echo "<a href='comments.php?document_id={$document_id}&delete_comment={$comment_row['id']}'>Obriši</a></li>";
+            echo "<li>{$comment_row['comment_text']} <br><small>{$comment_row['created_at']}</small></li>";
         }
         ?>
+
     </ul>
+
+
 </body>
 </html>
+   
