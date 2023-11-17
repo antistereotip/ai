@@ -132,4 +132,10 @@ $comments_result = $conn->query("SELECT * FROM comments2 WHERE document_id = $do
             echo "<li>{$comment_row['comment_text']} <br><small>{$comment_row['created_at']}</small></li>";
         }
         ?>
+
+    </ul>
+
+
+</body>
+</html>
    

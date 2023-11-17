@@ -163,7 +163,7 @@ $total_pages = ceil($total_pages_query->fetch_row()[0] / $limit);
     </style>
 </head>
 <body>
-    <h1>Documents</h1>
+    <h1>Dokumenti</h1>
 	<a href="logout.php">Odjavi se</a><br /><br />
 
     <!-- Forma za unos dokumenata -->
@@ -174,7 +174,9 @@ $total_pages = ceil($total_pages_query->fetch_row()[0] / $limit);
 
     <!-- Forma za pretragu -->
     <form action="index.php" method="get">
-        <input type="text" name="search" placeholder="Pretraži dokumente" value="<?php echo $search_query; ?>">
+        <input type="text" name="search" placeholder="Pretraži dokumente" value="<?php echo $search_query; ?>" style="
+    padding: 0.5%;
+">
         <button type="submit">Pretraži</button>
     </form>
 
