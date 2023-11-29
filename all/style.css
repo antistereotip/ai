@@ -1,0 +1,157 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #333;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input[type="file"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+}
+
+.post {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.post h2 {
+    color: #333;
+}
+
+.post p {
+    color: #666;
+}
+
+.post-date {
+    color: #888;
+    font-size: 0.8em;
+}
+
+.delete-post {
+    background-color: #dc3545;
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.delete-post:hover {
+    background-color: #c82333;
+}
+
+.success-message {
+    color: #28a745;
+    margin-top: 10px;
+	text-align: center;
+	padding: 1%;
+}
+
+/* Stilizacija paginacije */
+.pagination {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.pagination a {
+    text-decoration: none;
+    padding: 8px 12px;
+    margin: 0 4px;
+    border: 1px solid #ccc;
+    color: #333;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.pagination a:hover {
+    background-color: #ddd;
+}
+
+.pagination .active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Ostali stilovi */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.post {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.post img {
+    max-width: 100%;
+    height: auto;
+}
+.izmena {
+	background: #e7e7e7;
+	padding: 1%;
+	border-radius: 5px;
+}
+
+/* Dodajte ostale stilove prema vašim potrebama */
