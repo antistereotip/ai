@@ -1,0 +1,40 @@
+<?php
+session_start();
+
+// Provjera je li korisnik prijavljen
+if (!isset($_SESSION['korisnik_id'])) {
+    // Ako korisnik nije prijavljen, preusmjerite ga na stranicu za prijavu
+    header('Location: login_form.html');
+    exit();
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dodaj post</title>
+</head>
+<body>
+    <h2>Dodaj post</h2>
+    <form action="add_post.php" method="POST" enctype="multipart/form-data">
+        <label for="naslov">Naslov:</label>
+        <input type="text" name="naslov" required><br>
+
+        <label for="slika">Slika:</label>
+        <input type="file" name="slika" accept="image/*" required><br>
+
+        <label for="sadrzaj">Sadržaj:</label>
+        <textarea name="sadrzaj" rows="4" required></textarea><br>
+
+        <label for="datum">Datum:</label>
+        <input type="date" name="datum" required><br>
+
+        <label for="autor">Autor:</label>
+        <input type="text" name="autor" required><br>
+
+        <input type="submit" value="Dodaj post">
+    </form>
+</body>
+</html>
